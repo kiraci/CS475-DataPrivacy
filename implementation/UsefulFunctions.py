@@ -29,7 +29,7 @@ def calculate_age_intervals(ages):
 def create_laplace_noised_array(data):
     # Set parameters for Laplace function implementation
     location = 1.0
-    scale = 1.0
+    scale = 10.0
 
     # Find actual data count
     # Gets random laplacian noise for all values

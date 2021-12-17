@@ -1,6 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
-
 
 class AreaChart:
     def __init__(self, x, y, colortofill, colortoline, alpha=0.2):

@@ -1,12 +1,11 @@
 # libraries
-import numpy as np
-import matplotlib.pyplot as plt
 from csv import reader
-import UsefulFunctions as funcs
-from charts.Histogram import Histogram
-from charts.AreaChart import AreaChart
+
 from haversine import Unit
 import haversine as hs
+import UsefulFunctions as funcs
+from charts.AreaChart import AreaChart
+from charts.Histogram import Histogram
 
 print('Enter interest area:')
 hobby = input()
