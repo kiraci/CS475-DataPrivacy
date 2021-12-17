@@ -1,10 +1,13 @@
+# libraries
+import numpy as np
+import matplotlib.pyplot as plt
 # import numpy
 import numpy
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from csv import reader
-# open file in read mode
+import sys
 
 def calculate_age_intervals(ages):
     age_frequencies = [0] * 10
@@ -35,21 +38,33 @@ def calculate_age_intervals(ages):
 
     return age_frequencies
 
+# open file in read mode
 with open('data.csv', 'r') as read_obj:
     print('Enter interest area:')
     x = input()
     # pass the file object to reader() to get the reader object
     csv_reader = reader(read_obj)
 
+    ages = []
+
+
     count = 0
     data = []
     # Iterate over each row in the csv using reader object
     for row in csv_reader:
         # row variable is a list that represents a row in csv
+        # Create K-Anonymity Age Histogram
         if row[22] == x:
-
+            ages.append(int(row[19]))
             count += 1
             data.append(int(row[19]))
+
+    # create dataset
+    height = calculate_age_intervals(ages)
+    bars = ('10-15', '16-20', '21-25', '26-30', '31-40', '41-50', '51-60', '61-70', '71-80', '80+')
+    x_pos = np.arange(len(bars))
+
+            
     # Set parameters for Laplace function implementation
     location = 1.0
     scale = 1.0
@@ -62,6 +77,20 @@ with open('data.csv', 'r') as read_obj:
 
     noisy_data = numpy.array(data) + noise
     print(noisy_data)
+
+    # Create bars and choose color
+    plt.bar(x_pos, height, color=(0.5, 0.1, 0.5, 0.6))
+
+    # Add title and axis names
+    plt.title('Ages of People with K-Anonymity')
+    plt.xlabel('Age Intervals')
+    plt.ylabel('Count')
+
+    # Create names on the x axis
+    plt.xticks(x_pos, bars)
+
+    # Show graph
+    plt.show()
 
     result = noisy_data.astype(int)
     x = [10, 15, 20, 25, 30,40, 50, 60, 70, 80]
