@@ -26,6 +26,7 @@ def calculate_age_intervals(ages):
 
     return age_frequencies
 
+
 def create_laplace_noised_array(data):
     # Set parameters for Laplace function implementation
     location = 1.0

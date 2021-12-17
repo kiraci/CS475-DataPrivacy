@@ -21,7 +21,7 @@ class Histogram:
         plt.xlabel(self.xlabel)
         plt.ylabel(self.ylabel)
 
-        # Create names on the x axis
+        # Create names on the x-axis
         plt.xticks(self.xpos, self.x)
 
         # Show graph

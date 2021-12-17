@@ -1,6 +1,5 @@
 # libraries
 from csv import reader
-
 from haversine import Unit
 import haversine as hs
 import UsefulFunctions as funcs
@@ -39,15 +38,25 @@ with open('data.csv', 'r') as read_obj:
                 loc.append(int(row[22]))
 
     # Create Histogram For Ages - K-Anonymity
-    histogramForAgesWithKAnonymity = Histogram(('10-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '80+'), funcs.calculate_age_intervals(ages), 'Ages of People with K-Anonymity', 'Age Intervals', 'Count', (0.5, 0.1, 0.5, 0.6))
+    histogramForAgesWithKAnonymity = Histogram(('10-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '80+'),
+                                               funcs.calculate_age_intervals(ages),
+                                               'Ages of People with K-Anonymity',
+                                               'Age Intervals',
+                                               'Count',
+                                               (0.5, 0.1, 0.5, 0.6))
     histogramForAgesWithKAnonymity.run()
 
     # Create Area Chart For Ages - Laplace Noise
-    areaChartForAgesWithLaplaceNoise = AreaChart([10, 20, 30, 40, 50, 60, 70, 80], funcs.create_laplace_noised_array(data), "skyblue", "Slateblue")
+    areaChartForAgesWithLaplaceNoise = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
+                                                 funcs.create_laplace_noised_array(data),
+                                                 "skyblue",
+                                                 "Slateblue")
     areaChartForAgesWithLaplaceNoise.run()
 
     # Create Area Chart For Ages with Distance - Laplace Noise
     areaChartForAgesWithLaplaceNoiseWithDistance = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
-                                                 funcs.create_laplace_noised_array(loc), "skyblue", "Slateblue")
+                                                             funcs.create_laplace_noised_array(loc),
+                                                             "skyblue",
+                                                             "Slateblue")
     areaChartForAgesWithLaplaceNoiseWithDistance.run()
 
