@@ -26,6 +26,7 @@ def calculate_age_intervals(ages):
 
     return age_frequencies
 
+
 def create_laplace_noised_array(data):
     # Set parameters for Laplace function implementation
     location = 1.0
@@ -42,3 +43,24 @@ def create_laplace_noised_array(data):
     result = noisy_data.astype(int)
 
     return calculate_age_intervals(result.tolist())
+
+
+def normalize_array(arr):
+    max_number = max(arr)
+    min_number = min(arr)
+    average = sum(arr) / len(arr) / 2
+
+    length_of_array = len(arr)
+    formula = 0
+
+    for i in range(0, length_of_array):
+        if (length_of_array < 50):
+            formula = 3
+        elif(length_of_array < 1000):
+            formula = (max_number - min_number) % 20
+        elif(length_of_array > 10000):
+            formula = 200
+
+        if(arr[i] < average):
+            arr[i] += formula
+    return arr

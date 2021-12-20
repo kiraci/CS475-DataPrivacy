@@ -39,6 +39,9 @@ with open('data.csv', 'r') as read_obj:
             if hs.haversine(location, location2, unit=Unit.METERS) < int(distance):
                 loc.append(int(row[22]))
 
+    print(funcs.create_laplace_noised_array(loc))
+    print(funcs.normalize_array(funcs.normalize_array(funcs.create_laplace_noised_array(loc))))
+
     # Create Histogram For Ages - K-Anonymity
     histogramForAgesWithKAnonymity = Histogram(('10-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '80+'), funcs.calculate_age_intervals(ages), 'Ages of People with K-Anonymity', 'Age Intervals', 'Count', (0.5, 0.1, 0.5, 0.6))
     histogramForAgesWithKAnonymity.run()
@@ -47,8 +50,15 @@ with open('data.csv', 'r') as read_obj:
     areaChartForAgesWithLaplaceNoise = AreaChart([10, 20, 30, 40, 50, 60, 70, 80], funcs.create_laplace_noised_array(data), "skyblue", "Slateblue")
     areaChartForAgesWithLaplaceNoise.run()
 
+    print(loc)
+    print(funcs.create_laplace_noised_array(loc))
+
     # Create Area Chart For Ages with Distance - Laplace Noise
     areaChartForAgesWithLaplaceNoiseWithDistance = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
                                                  funcs.create_laplace_noised_array(loc), "skyblue", "Slateblue")
     areaChartForAgesWithLaplaceNoiseWithDistance.run()
+
+    areaChartForAgesWithLaplaceNoiseWithDistancea = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
+                                                 funcs.normalize_array(funcs.create_laplace_noised_array(loc)), "skyblue", "Slateblue")
+    areaChartForAgesWithLaplaceNoiseWithDistancea.run()
 
