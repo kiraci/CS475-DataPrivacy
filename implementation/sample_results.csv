@@ -1,0 +1,17 @@
+The 5-digit ZIP Code,Longitude (degrees) of the center (centroid) of ZIP Code.,Latitude (degrees) of the center (centroid) of ZIP Code.,ZIP Code Classification:P=PO Box U=Unique zip used for large orgs/businesses/bldgs Blank=Standard/non-unique,Name of city/org,Two-letter abbrev. for state name.,Full name of state/territory,Name of county/parish.,Single Area Code for ZIP Code.,Time Zone for ZIP Code.,Diff (hrs) between GMT and time zone for ZIP Code,ZIP Code obeys Daylight Savings: Y-Yes N-No,USPS Post Office Name: same as City,Clean CITY name for geocoding,Clean STATENAME for geocoding,Gender,Name,Book,Age
+2**,Longtitude - Not Provided,Latitude - Not Provided,,Westwood,MA,Massachusetts,Norfolk,7**,Eastern,-5,Y,Westwood,WESTWOOD,MASSACHUSETTS,Male,Name - Not Provided,Book,30-40
+6**,Longtitude - Not Provided,Latitude - Not Provided,,Fairfield,CT,Connecticut,Fairfield,2**,Eastern,-5,Y,Fairfield,FAIRFIELD,CONNECTICUT,Female,Name - Not Provided,Book,10-20
+7**,Longtitude - Not Provided,Latitude - Not Provided,,Hillside,NJ,New Jersey,Union,9**,Eastern,-5,Y,Hillside,HILLSIDE,NEWJERSEY,Female,Name - Not Provided,Book,10-20
+7**,Longtitude - Not Provided,Latitude - Not Provided,,Bogota,NJ,New Jersey,Bergen,2**,Eastern,-5,Y,Bogota,BOGOTA,NEWJERSEY,Male,Name - Not Provided,Book,30-40
+8**,Longtitude - Not Provided,Latitude - Not Provided,P,Quinton,NJ,New Jersey,Salem,8**,Eastern,-5,Y,Quinton,QUINTON,NEWJERSEY,Female,Name - Not Provided,Book,50-60
+8**,Longtitude - Not Provided,Latitude - Not Provided,P,Green Creek,NJ,New Jersey,Cape May,6**,Eastern,-5,Y,Green Creek,GREENCREEK,NEWJERSEY,Female,Name - Not Provided,Book,20-30
+8**,Longtitude - Not Provided,Latitude - Not Provided,,Greenwich,NJ,New Jersey,Cumberland,8**,Eastern,-5,Y,Greenwich,GREENWICH,NEWJERSEY,Female,Name - Not Provided,Book,40-50
+1**,Longtitude - Not Provided,Latitude - Not Provided,P,Yonkers,NY,New York,Westchester,9**,Eastern,-5,Y,Yonkers,YONKERS,NEWYORK,Female,Name - Not Provided,Book,70-80
+1**,Longtitude - Not Provided,Latitude - Not Provided,,Wyandanch,NY,New York,Suffolk,6**,Eastern,-5,Y,Wyandanch,WYANDANCH,NEWYORK,Male,Name - Not Provided,Book,30-40
+1**,Longtitude - Not Provided,Latitude - Not Provided,P,Parker Ford,PA,Pennsylvania,Chester,6**,Eastern,-5,Y,Parker Ford,PARKERFORD,PENNSYLVANIA,Female,Name - Not Provided,Book,60-70
+1**,Longtitude - Not Provided,Latitude - Not Provided,P,Newark,DE,Delaware,New Castle,3**,Eastern,-5,Y,Newark,NEWARK,DELAWARE,Male,Name - Not Provided,Book,60-70
+2**,Longtitude - Not Provided,Latitude - Not Provided,P,Laurel,MD,Maryland,Prince Georges,3**,Eastern,-5,Y,Laurel,LAUREL,MARYLAND,Female,Name - Not Provided,Book,40-50
+2**,Longtitude - Not Provided,Latitude - Not Provided,,Preston,MD,Maryland,Caroline,4**,Eastern,-5,Y,Preston,PRESTON,MARYLAND,Female,Name - Not Provided,Book,50-60
+2**,Longtitude - Not Provided,Latitude - Not Provided,,Fairfax,VA,Virginia,Fairfax,7**,Eastern,-5,Y,Fairfax,FAIRFAX,VIRGINIA,Female,Name - Not Provided,Book,50-60
+2**,Longtitude - Not Provided,Latitude - Not Provided,P,Alexandria,VA,Virginia,Alexandria City,7**,Eastern,-5,Y,Alexandria,ALEXANDRIA,VIRGINIA,Male,Name - Not Provided,Book,50-60
+2**,Longtitude - Not Provided,Latitude - Not Provided,,Quinton,VA,Virginia,New Kent,8**,Eastern,-5,Y,Quinton,QUINTON,VIRGINIA,Male,Name - Not Provided,Book,40-50
