@@ -15,7 +15,7 @@ latitude = input()
 print('Enter longitude:')
 longitude = input()
 location = (float(latitude), float(longitude))
-Bprint('Enter distance in meters:')
+print('Enter distance in meters:')
 distance = input()
 
 # open file in read mode
