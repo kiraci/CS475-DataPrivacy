@@ -12,9 +12,12 @@ There are two solutions in the implementation part.
   e. The Graphs will Be Reflected on the Screen. (You can find what they are in reports) 
   
   * To Have The Sample Results in This Repository, Give Sample Outputs Below
-    Interest area: Book
+    Interest area: Book 
+    
     Latitude: -73
+    
     Longitude: 40
+    
     Distance: 120
   
   * You can directly open it with Pycharm.
