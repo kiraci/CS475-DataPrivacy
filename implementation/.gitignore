@@ -1,2 +1,5 @@
 .idea/
 venv/
+.ipynb_checkpoints/
+__pycache__/
+charts/__pycache__/

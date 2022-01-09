@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def calculate_age_intervals(ages):
     age_frequencies = [0] * 8
 
@@ -26,11 +25,10 @@ def calculate_age_intervals(ages):
 
     return age_frequencies
 
-
 def create_laplace_noised_array(data):
     # Set parameters for Laplace function implementation
     location = 1.0
-    scale = 10.0
+    scale = 1.0
 
     # Find actual data count
     # Gets random laplacian noise for all values
@@ -43,3 +41,19 @@ def create_laplace_noised_array(data):
     result = noisy_data.astype(int)
 
     return calculate_age_intervals(result.tolist())
+
+def create_dummy_noise(data):
+    totalSize = sum(data)
+    averageOfArray = totalSize / len(data)
+
+    # If total length is lower than 100, we will just populate by 5 people
+    if(len(data) <= 100):
+        for i in range(len(data)):
+            data[i] += 5
+    # Else if total length is bigger than 100, we will add %1 percent of total size as dummy nodes to the colums which are under the average
+    elif(len(data) > 100):
+        for i in range(len(data)):
+            if (data[i] < averageOfArray):
+                data[i] += (totalSize / 100)
+
+    return data
