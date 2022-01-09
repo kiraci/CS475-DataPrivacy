@@ -2,4 +2,7 @@
 
 This is repo for the course CS475 DataPrivacy.
 
-Slides, Reports, Implementation
+There are two solutions in the implementation part.
+
+1. Graphical and Producing CSV file
+2. Heat Map
