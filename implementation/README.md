@@ -21,6 +21,6 @@ There are two solutions in the implementation part.
     
     Distance: 120
   
-  * You can directly open it with Pycharm.
+  * You can directly open it with Pycharm. Be careful that remove results.csv if you have executed the program once.
 3. Heat Map
   * We recommend you to execute this with a jupyter notebook. Be sure that you have downloaded neccessary libraries.
