@@ -12,6 +12,7 @@ There are two solutions in the implementation part.
   e. The Graphs will Be Reflected on the Screen. (You can find what they are in reports) 
   
   * To Have The Sample Results in This Repository, Give Sample Outputs Below
+    
     Interest area: Book 
     
     Latitude: -73
