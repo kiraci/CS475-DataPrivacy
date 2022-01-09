@@ -5,6 +5,8 @@ import haversine as hs
 import UsefulFunctions as funcs
 from charts.AreaChart import AreaChart
 from charts.Histogram import Histogram
+import numpy as np
+
 
 print('Enter interest area:')
 hobby = input()
@@ -13,7 +15,7 @@ latitude = input()
 print('Enter longitude:')
 longitude = input()
 location = (float(latitude), float(longitude))
-print('Enter distance in meters:')
+Bprint('Enter distance in meters:')
 distance = input()
 
 # open file in read mode
@@ -31,14 +33,16 @@ with open('data.csv', 'r') as read_obj:
         # row variable is a list that represents a row in csv
         # Create K-Anonymity Age Histogram
         if row[21] == hobby:
-            ages.append(int(row[22]))
-            data.append(int(row[22]))
+
             location2 = (float(row[2]), float(row[1]))
-            if hs.haversine(location, location2, unit=Unit.METERS) < int(distance):
+            laplacian_noise = np.random.laplace(1.0, 1.0, 2)
+            noisy_location = location2 + laplacian_noise
+            if hs.haversine(location, noisy_location, unit=Unit.METERS) < int(distance):
+                ages.append(int(row[22]))
+                data.append(int(row[22]))
                 loc.append(int(row[22]))
 
-    print(funcs.create_laplace_noised_array(loc))
-    print(funcs.normalize_array(funcs.normalize_array(funcs.create_laplace_noised_array(loc))))
+
 
     # Create Histogram For Ages - K-Anonymity
     histogramForAgesWithKAnonymity = Histogram(('10-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '80+'),
@@ -60,13 +64,13 @@ with open('data.csv', 'r') as read_obj:
     print(funcs.create_laplace_noised_array(loc))
 
     # Create Area Chart For Ages with Distance - Laplace Noise
-    areaChartForAgesWithLaplaceNoiseWithDistance = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
-                                                             funcs.create_laplace_noised_array(loc),
-                                                             "skyblue",
-                                                             "Slateblue")
-    areaChartForAgesWithLaplaceNoiseWithDistance.run()
-
-    areaChartForAgesWithLaplaceNoiseWithDistancea = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
-                                                 funcs.normalize_array(funcs.create_laplace_noised_array(loc)), "skyblue", "Slateblue")
-    areaChartForAgesWithLaplaceNoiseWithDistancea.run()
+    # areaChartForAgesWithLaplaceNoiseWithDistance = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
+    #                                                          funcs.create_laplace_noised_array(loc),
+    #                                                          "skyblue",
+    #                                                          "Slateblue")
+    # areaChartForAgesWithLaplaceNoiseWithDistance.run()
+    #
+    # areaChartForAgesWithLaplaceNoiseWithDistancea = AreaChart([10, 20, 30, 40, 50, 60, 70, 80],
+    #                                              funcs.normalize_array(funcs.create_laplace_noised_array(loc)), "skyblue", "Slateblue")
+    # areaChartForAgesWithLaplaceNoiseWithDistancea.run()
 
